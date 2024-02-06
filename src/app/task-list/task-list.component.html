@@ -1,0 +1,26 @@
+<table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Due Date</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        @for (task of tasks; track $index) {
+            
+      <tr>
+        <td>{{ task.title }}</td>
+        <td>{{ task.description }}</td>
+        <td>{{ task.dueDate  }}</td>
+        <td>{{ task.status ? 'Completed' : 'Not Completed' }}</td>
+        <td>
+          <button (click)="editTask($index)">Edit</button>
+          <button (click)="deleteTask($index)">Delete</button> 
+        </td>
+      </tr>
+    }
+    </tbody>
+  </table>

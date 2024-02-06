@@ -1,0 +1,22 @@
+<p>task-form works!</p>
+
+
+ <form>
+    <label>Title:</label>
+    <input [(ngModel)]="task.title"  required>
+  <br>
+  <br>
+    <label>Description:</label>
+    <textarea [(ngModel)]="task.description"  required></textarea>
+  <br>
+  <br>
+    <label>Due Date:</label>
+    <input [(ngModel)]="task.dueDate" type="date" required>
+  <br>
+  <br>
+    <label>Status:</label>
+    <input type="checkbox"  [(ngModel)]="task.status" type="checkbox">
+  <br>
+  <br>
+    <button type="button" (click)="addTask()">Add Task</button>
+  </form> 
